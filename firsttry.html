@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="icon" href="./image/images-removebg-preview (1).png" sizes="16x16">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="d-lg-flex maindiv">
+            <div class="" style="padding-top: 60px;">
+                <h4 class="fw-bold d-md-none d-lg-flex">facebook</h4>
+                <p class="fw-medium d-md-none d-lg-flex d-none fs-3 lh-sm">Facebook helps you connect and share <br> with the people in your life.</p>
+            </div>
+            <div class="card px-3 col-md-10 col-lg-4 pt-3 shadow border-0 bg-white">
+                <div class="">
+                    <div id="wrong" class="alert alert-danger rounded-0 text-center fw-medium text-black" style="display: none; font-size: 14px;">Wrong Credentials</div>
+                    <input id="emailPhone" class="form-control input" type="text" placeholder="Email address or phone number">
+                    <input id="pass" class="form-control input mt-3" type="password" placeholder="Password">
+                    <button id="submit" class="btn btn-primary fw-bold w-100 my-3 fs-5 ">Log in</button>
+                    <p class="text-center text-primary forgot" style="font-size: 15px;">Forgotten password?</p>
+                    <hr>
+                    <div class="text-center mb-4 mt-4">
+                        <button class="create rounded-2 px-3">Create new account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        allUser = []
+        const btn = document.getElementById('submit')
+        const ePhone = document.getElementById('emailPhone')
+        const password = document.getElementById('pass')
+        btn.addEventListener('click', ()=> {
+            if (ePhone.value === '' || password.value === '') {
+                wrong.style.display = 'block'
+                setTimeout(()=>{
+                wrong.style.display = 'none'
+                }, 2000)                
+            } else {
+                const userData = {
+                    emailPhone: ePhone.value,
+                    passwords: password.value,
+                }
+                wrong.style.display = 'none'
+                ePhone.value = ''
+                password.value = ''
+
+                allUser.push(userData)
+            }
+        })
+    </script>
+</body>
+</html>
