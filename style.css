@@ -12,7 +12,7 @@ section{
     background-color: #F2F4F7;
 }
 .smallscreen{
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #EEF6FF;
     
 }
