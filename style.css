@@ -54,6 +54,9 @@ h4{
     padding-bottom: 12px;
     align-items: center;
 }
+.put:focus{
+    border: 2px solid #1f2020e0;
+}
 
 /* @media screen and (max-width: 470px) {
     .create{
@@ -71,4 +74,5 @@ h4{
     .cardipad{
         width: 70%;
     }
+    
 }
